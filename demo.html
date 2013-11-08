@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="dst.js"></script>
+<script src="matrix.js"></script>
+<script src="animator.js"></script>
+</head>
+<body>
+<table border="1">
+<tr><th>
+DST module
+</th><td>
+<script>document.write("New York dst: "+dst('-5.0'));</script>
+</td></tr>
+<tr><th>
+Matrix module
+</th><td>
+<script>
+D=matrix.determinant([
+    [2, 3],
+    [1, 1]
+]);
+Dx=matrix.determinant([
+    [14, 3],
+    [8, 1]
+]);
+Dy=matrix.determinant([
+    [2, 14],
+    [1, 8]
+]);
+document.write("2x+3y=14<br/>x+y=8<br/>Using Crammer's rule:<br/>x = "+Dx/D+"<br/>y = "+Dy/D);
+</script>
+</td></tr>
+<tr><th>
+Animator module
+</th><td>
+<script>
+var newdiv = document.createElement('div'); //Create div to be used by animator
+newdiv.innerHTML = 'Hello World!'; //Add content
+show=new animator(newdiv); //Construct animator
+var thisScript = document.scripts[document.scripts.length - 1]; // get this script
+thisScript.parentNode.appendChild(newdiv); //append div to script's parent
+</script>
+<input type="button" onclick="show.fadein();" value="in" />
+<input type="button" onclick="show.fadeout();" value="out" />
+</td></tr>
+</table>
+</body>
+</html>
