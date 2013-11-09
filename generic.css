@@ -1,0 +1,103 @@
+/* ========================CSS RESET==========================
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+table{border-collapse:collapse;border-spacing:0}
+/*========================GENERIC STYLING==========================*/
+header{
+  background-color:#57A;
+  padding:10px 0px;
+  color:#FFF;
+  font-size: 200%;
+}
+body {
+  font-size: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-weight: 400;
+  color: #777;
+}
+
+
+/*TABLES*/
+table {
+  width: 100%;
+}
+tr > * {
+  border: 1px solid #e0e0e0;
+  vertical-align:middle;
+  text-align:center;
+}
+th {
+  font-weight: 500;
+}
+td {
+  font-weight: 300;
+}
+input[type="text"], textarea {
+  width:100%;
+  display: block;
+  border: 1px solid silver;
+  background: linear-gradient(#eee, #fff);
+  transition: all 0.3s ease-out;
+  padding: 5px;
+  color: #555;
+}
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+  background-position: 0 -1.7em;
+}
+input[type="button"], button {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background: #08C;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 
+    1px 1px #53A7EA,
+    2px 2px #53A7EA,
+    3px 3px #53A7EA;
+  transition: all 0.1s ease-in;
+  /*Kill border*/
+  border:none;
+  -webkit-appearance: none;
+  -webkit-border-radius:0; 
+  border-radius:0;
+}
+input[type="button"]:hover, button:hover  { background: #0AF; }
+
+
+/*LINKS*/
+a {
+    display: inline-block;
+    position: relative;
+    padding-left: 6px;
+    /* Font styles */
+    text-decoration: none;
+    color: #6AB3EC;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.9);
+}
+
+a:hover {
+    color: #3C9CE7;
+}
+
+a:before {
+    content: "\25BA";
+    font-size: 80%;
+    display: inline-block;
+    padding-right: 3px;
+    pointer-events: none;
+}
+a:hover:before {
+    color: #F2BF97;
+}
